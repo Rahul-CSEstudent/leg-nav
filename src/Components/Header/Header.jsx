@@ -217,10 +217,10 @@ export const Menu = memo((props) => {
               {
                 item.link ? (
                   <Link className="nav-link" to={item.link}>
-                    {item.title}
+                  
                   </Link>
                 ) : (
-                  <span className="nav-link">{item.title}</span>
+                  <span className="nav-link"></span>
                 )
               }
               <i className="fa fa-angle-down" onClick={(e) => handleMenuClick(e, i)} />
@@ -232,13 +232,12 @@ export const Menu = memo((props) => {
                         {
                           item.link ? (
                             <Link className="nav-link" to={item.link}>
-                              {item.title}
-                              {item.dropdown && (<i className="fas fa-angle-right"></i>)}
+                            
                             </Link>
                           ) : (
                             <span className="nav-link">
-                              {item.title}
-                              {item.dropdown && (<i className="fas fa-angle-right"></i>)}
+                              {/* {item.title} */}
+                           
                             </span>
                           )
                         }
@@ -253,13 +252,11 @@ export const Menu = memo((props) => {
                                         className={`nav-link${item.dropdown ? " md:text-black md:mt-[15px] md:mb-[7px]" : ""}`}
                                         to={item.link}
                                       >
-                                        {item.title}
-                                        {item.dropdown && (<i className="fas fa-angle-right"></i>)}
+                                       
                                       </Link>
                                     ) : (
                                       <span className="nav-link">
-                                        {item.title}
-                                        {item.dropdown && (<i className="fas fa-angle-right"></i>)}
+                                      
                                       </span>
                                     )
                                   }
@@ -271,7 +268,7 @@ export const Menu = memo((props) => {
                                             className="simple-dropdown"
                                             key={i}
                                           >
-                                            <Link className="nav-link" to={item.link}>{item.title}</Link>
+                                            
                                           </li>
                                         );
                                       })}
@@ -289,26 +286,7 @@ export const Menu = memo((props) => {
               )}
               {(item.megamenu) && (
                 <div className="flex megamenu" ref={megamenu_ref}>
-                  {item.megamenu.map((item, i) => {
-                    return (
-                      <ul className={`${(item.dropdown.filter(item => item.img).length > 0) ? "!pr-[30px] img-wrapper inline-block last:!pr-[0px]" : "inline-block"}`} key={i}>
-                        {item.title && <li className="title text-md font-medium mb-[15px] whitespace-nowrap">
-                          {item.title}
-                        </li>}
-                        {item.dropdown &&
-                          item.dropdown.map((item, i) => {
-                            return (
-                              <li className="nav-item" key={i}>
-                                {item.title && <Link className="nav-link" to={item.link ? item.link : "#"} > {item.icon && (<i className={`${item.icon} mr-[10px]`} ></i>)}{" "}
-                                  {item.title}
-                                </Link>}
-                                {(item.img && item.link) && <Link to={item.link}><img height="235" alt="menu-banner" width="210" className="inline-block max-w-[210px]" src={item.img} /></Link>}
-                              </li>
-                            );
-                          })}
-                      </ul>
-                    );
-                  })}
+                 
                 </div>
               )}
             </li>

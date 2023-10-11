@@ -7,10 +7,6 @@ const ProgressBarData01 = [
         title:"LOGO AND IDENTITY",
         value:"95",
     },
-    {
-        title:"GRAPHIC DESIGN",
-        value:"75",
-    },
 ]
 
 const ProgressBarData02 = [

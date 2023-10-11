@@ -98,19 +98,19 @@ const IconWithTextData_04 = [
 const IconWithTextData_05 = [
     {
         icon: "line-icon-Vector-5",
-        title: "Good design",
+        title: "Strategic Thinking",
     },
     {
         icon: "line-icon-Police",
-        title: "Inspiring ideas",
+        title: "Strong Communication",
     },
     {
         icon: "line-icon-Bee",
-        title: "Innovative code",
+        title: "Media Expertise",
     },
     {
         icon: "line-icon-Medal-2",
-        title: "Best quality",
+        title: "Crisis Management",
     },
     {
         icon: "line-icon-Idea-5",

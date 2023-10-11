@@ -1,5 +1,6 @@
 import React from 'react'
-
+import ProgressBar from '../../Components/ProgressBar/ProgressBar'
+import { ProgressBarData01 } from '../../Components/ProgressBar/ProgressBarData'
 // Libraries
 import { Col, Container, Navbar, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -35,6 +36,25 @@ import { blogData } from "../../Components/Blogs/BlogData";
 import { FilterData } from '../../Components/Portfolio/PortfolioData';
 
 
+const SocialIconsData = [
+    {
+      link: "https://www.facebook.com/",
+      icon: "fab fa-facebook-f"
+    },
+    {
+      link: "https://dribbble.com/",
+      icon: "fab fa-dribbble"
+    },
+    {
+      link: "https://twitter.com/",
+      icon: "fab fa-twitter"
+    },
+    {
+      link: "https://www.instagram.com/",
+      icon: "fab fa-instagram"
+    }
+  ]
+
 const TeamData = [
     {
       img: '/logo/arav.png',
@@ -51,11 +71,6 @@ const TeamData = [
           title: 'Linkedin',
           link: "https://www.linkedin.com/in/avra/",
           icon: "fa-brands fa-linkedin"
-        },
-        {
-          title: 'twitter',
-          link: "https://www.twitter.com",
-          icon: "fa-brands fa-twitter"
         },
         {
           title: 'instagram',
@@ -81,11 +96,6 @@ const TeamData = [
           icon: "fa-brands fa-linkedin"
         },
         {
-          title: 'twitter',
-          link: "https://www.twitter.com",
-          icon: "fa-brands fa-twitter"
-        },
-        {
           title: 'instagram',
           link: "https://www.instagram.com/buddy_its_me_who/",
           icon: "fa-brands fa-instagram"
@@ -107,11 +117,6 @@ const TeamData = [
           title: 'Linkedin',
           link: "https://www.linkedin.com/in/monishaakm/",
           icon: "fa-brands fa-linkedin"
-        },
-        {
-          title: 'twitter',
-          link: "https://www.twitter.com",
-          icon: "fa-brands fa-twitter"
         },
         {
           title: 'instagram',
@@ -315,7 +320,7 @@ const DesignagencyPage = (props) => {
                         <Row className="full-screen md:h-[650px] sm:h-[500px]">
                             <Col lg={5} md={6} sm={7} className="flex flex-col items-start justify-center">
                                 <h1 className="font-serif font-semibold text-[60px] leading-[95px] text-darkgray -tracking-[4px] mb-[4.5rem] xs:w-[65%] lg:text-[55px] lg:leading-[90px] md:text-[45px] md:leading-[65px] sm:text-[30px] sm:leading-[43px] sm:-tracking-[.5px]">Your Media And Press Release Partner</h1>
-                               <Buttons ariaLabel="Get started now" to="https://wa.me/+91+919629572929" className="font-semibold font-serif z-10 uppercase btn-expand rounded md:mb-[15px] hover:text-darkgray" size="xl" color="#232323" themeColor="#fff" title="Get started now" />
+                               <Buttons ariaLabel="Get started now" to="https://wa.me/+91+919629572929" className="font-semibold font-serif z-10 uppercase btn-expand rounded md:mb-[15px] hover:text-darkgray" size="xl" color="#232323" themeColor="#fff" title="Lets Share Your Journey" />
                             </Col>
                         </Row>
                     </Container>
@@ -350,11 +355,11 @@ const DesignagencyPage = (props) => {
                 {/* Section Start */}
                 <section className="py-[160px] border-t border-mediumgray pb-0 lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
                     <PortfolioBordered
-                        title="Amazing work"
+                        title="All You Need, Personalized Package"
                         className="design-agency-portfolio-bordered"
                         grid="grid grid-4col xl-grid-4col lg-grid-2col md-grid-2col sm-grid-2col xs-grid-1col"
                         data={PortfolioData}
-                        filterData={FilterData}
+                      
                     />
                 </section>
                 {/* Section End */}
@@ -412,14 +417,14 @@ const DesignagencyPage = (props) => {
                         <Row className="items-center justify-center mt-0 md:mt-8">
                             <m.div className="text-right md:mb-20 xs:mb-16 md:text-center col-lg-3 col-md-5 col-sm-6 order-1" {...fadeInLeft}>
                                 <i className="fas fa-quote-right text-[28px] block opacity-30 mb-[25px]"></i>
-                                <span className="font-serif font-medium text-lg leading-[30px] text-darkgray inline-block w-[80%] md:text-xmd md:leading-[22px]">We offers perfect hiring models for your project requirements</span>
+                                <span className="font-serif font-medium text-lg leading-[30px] text-darkgray inline-block w-[80%] md:text-xmd md:leading-[22px]">We offers perfect Publication plans for your requirements</span>
                             </m.div>
                             <Col lg={{ span: 6, order: 2 }} md={8} className="p-0 order-3">
                                 <m.img className="w-full" width={585} height={340} src="assets/img/pic.jpg" alt="" {...fadeIn} />
                             </Col>
                             <m.div className="md:mb-20 xs:mb-28 md:text-center col-lg-3 col-md-5 col-sm-6 order-lg-3 order-2" {...fadeInRight}>
                                 <i className="fas fa-quote-left text-[28px] block opacity-30 mb-[25px]"></i>
-                                <span className="font-serif font-medium text-lg leading-[30px] text-darkgray inline-block w-[80%] md:text-xmd md:leading-[22px]">Our highly qualified and skilled designer are here to help</span>
+                                <span className="font-serif font-medium text-lg leading-[30px] text-darkgray inline-block w-[80%] md:text-xmd md:leading-[22px]">Our highly qualified and skilled professionals are here to help</span>
                             </m.div>
                         </Row>
                     </Container>
@@ -450,74 +455,49 @@ const DesignagencyPage = (props) => {
                     </Container>
       </section>
                 {/* Section End */}
-
+                <section className="py-[80px] overflow-hidden bg-[#ffcc2e] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
+        <Container>
+          <m.div className="row" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
+            <Col className="col-lg-5 md:mb-20 sm:mb-16">
+              <h2 className="heading-6 font-serif text-darkgray mb-0 leading-[40px] sm:leading-[26px]">Join  With Legacies Navigate To Elevate Your Business<span className="font-semibold"><br/>Where Words Transform into Worlds, Your Story Starts Here</span></h2>
+            </Col>
+            <Col lg={{ span: 6, offset: 1 }}>
+              <ProgressBar theme="progressbar-style-01" data={ProgressBarData01} trailColor="transparent" height="4px" color="#232323" animation={fadeIn} />
+            </Col>
+          </m.div>
+        </Container>
+      </section>
                 {/* Section Start */}
-                <section className="py-[160px] overflow-hidden bg-no-repeat bg-right lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]" style={{ backgroundImage: `url('https://via.placeholder.com/653x323')` }}>
-                    <Container>
-                        <m.div className="row items-center">
-                            <m.div className="col-12 col-lg-3 md:mb-16 xs:mb-12" {...fadeInRight}>
-                                <m.div className="-ml-[40vw] text-right md:ml-0 md:text-center">
-                                    <span className="font-serif pr-8 font-semibold text-[200px] leading-[200px] text-[#ffcc2e] -tracking-[10px] block sm:tracking-[-1px] lg:text-[160px] lg:leading-[160px] lg:pr-0 md:text-[120px] md:leading-[120px] sm:text-[90px] sm:leading-[90px] xs:text-[50px] xs:leading-[50px]">navigate</span>
-                                </m.div>
-                            </m.div>
-                            <Col lg={6} className="text-left md:mb-12 md:text-center">
-                                <m.h2 className="heading-4 font-serif font-medium text-darkgray mb-0 -tracking-[1px] inline-block md:w-[80%] xs:w-full" {...fadeIn}>Join With Legacies Navigate To Elevate Your Business</m.h2>
-                            </Col>
-                            <m.div className="text-center col-lg-3" {...{ ...fadeIn, transition: { delay: 0.6 } }}>
-                                <Buttons ariaLabel="Start a project" to="/page/contact-modern" className="btn-fill btn-fancy font-medium font-serif uppercase rounded-none btn-shadow" size="md" themeColor="#232323" color="#fff" title="Lets Share your Journey" />
-                            </m.div>
-                        </m.div>
-                    </Container>
-                </section>
+                <section className="bg-[#ffcc2e] py-[80px] pt-0 md:pb-0">
+        <Container fluid>
+          <Row className="items-center">
+            <Col className="border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mb-[30px]"></Col>
+            <m.div className="col-md-auto text-center px-[4.5rem] md:px-10 xs:pt-6 xs:pb-8" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
+              <span className="font-serif font-light text-[70px] leading-[90px] text-darkgray -tracking-[3px] block xs:text-[50px] xs:leading-[55px]">Let's Grow <span className="font-semibold">together?</span></span>
+            </m.div>
+            <div className="col-md border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mt-[30px]"></div>
+          </Row>
+        </Container>
+      </section>
                 {/* Section End */}
             </div>
 
             {/* Footer Start */}
-            <m.div parallax={{ desktop: true, lg: false }} className="py-[6%] border-t border-mediumgray xs:py-[13%]">
-                <Container>
-                    <Row>
-                        <Col className="xl:text-left md:text-center last:m-0 md:mt-[25px]" lg={{ span: 3, order: 1 }} md={{ span: 12, order: 3 }} xs={{ span: 12, order: 3 }}>
-                            <Link aria-label="footer home link" to="/" className="text-slateblue mb-[10px] md:mb-[5px] md:mt-0 inline-block">
-                                <img src="/assets/img/webp/LN.png" alt="logo" width={211} height={86} />
-                            </Link>
-                            <p>© Copyright {new Date().getFullYear()} <a aria-label="footer litho link" href="/" className="underline underline-offset-4 text-black font-medium hover:text-white">Legacies</a></p>
-                        </Col>
-                        <Col lg={{ order: 2 }} md={{ span: 6, order: 1 }} xs={{ span: 12, order: 1 }} className="text-center items-center flex flex-col md:items-start sm:mb-[50px] sm:items-center xs:mb-[30px]">
-                            <span className="mb-[25px] block sm:w-full md:text-start md:w-4/5 sm:text-center leading-none md:leading-normal">
-                                <span className="text-black font-medium">Newsletter sign-up. </span>
-                                Get monthly updates and resources.
-                            </span>
-                            <div className="form w-[75%] justify-center md:justify-start xs:w-[95%] overflow-hidden">
-                                <Formik
-                                    initialValues={{ email: '' }}
-                                    validationSchema={Yup.object().shape({ email: Yup.string().email("Invalid email.").required("Field is required."), })}
-                                    onSubmit={async (values, actions) => {
-                                        actions.setSubmitting(true)
-                                        const response = await sendEmail(values)
-                                        response.status === "success" && resetForm(actions)
-                                    }}
-                                >
-                                    {({ isSubmitting, status }) => (
-                                        <div className="relative subscribe-style-05 overflow-hidden">
-                                            <Form className="relative">
-                                                <Input showErrorMsg={false} type="email" name="email" className="border-[1px] border-solid rounded-none bg-transparent small-input text-md m-0 w-full !pr-[50px]" placeholder="Enter your email address" />
-                                                <button aria-label="subscribe btn" type="submit" className={`text-xs tracking-[1px] !py-[4px] !px-[18px] top-1/2 translate-y-2/4 uppercase !border-l-0 xs:text-center${isSubmitting ? " loading" : ""}`}><i className="far fa-envelope text-lg leading-none m-0 mr-[10px] text-black xs:mr-0"></i></button>
-                                            </Form>
-                                            <AnimatePresence>
-                                                {status && <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="mt-[15px] w-full"><MessageBox className="rounded-[4px] text-md py-[10px] px-[22px]" theme="message-box01" variant="success" message="Your message has been sent successfully subscribed to our email list!" /></m.div>}
-                                            </AnimatePresence>
-                                        </div>
-                                    )}
-                                </Formik>
-                            </div>
-                        </Col>
-                        <Col className="text-center md:text-right sm:mb-[10px]" lg={{ span: 3, order: 3 }} md={{ span: 6, order: 2 }} xs={{ span: 12, order: 2 }} >
-                            <span className="mb-[15px] block text-right sm:text-center">Connect with social</span>
-                            <SocialIcons theme="social-icon-style-01" className="justify-end sm:justify-center" size="xs" iconColor="dark" data={FooterSocialIconData} />
-                        </Col>
-                    </Row>
-                </Container>
-            </m.div>
+            <Footer className="bg-[#ffcc2e] py-20" theme="light">
+        <Container>
+          <Row>
+            <Col lg={4} className="justify-start md:justify-center md:mb-[20px] flex items-center">
+              <span className="font-serif font-semibold text-sm uppercase text-darkgray">Call us today! +1 234 567 8910</span>
+            </Col>
+            <Col lg={4} className="text-center md:mb-[20px]">
+              <SocialIcons theme="social-icon-style-12" iconColor="dark" size="md" data={SocialIconsData} />
+            </Col>
+            <Col lg={4} className="text-right justify-end md:justify-center md:text-center flex items-center">
+              <p className="font-serif font-semibold text-sm uppercase text-darkgray leading-[30px]">© {new Date().getFullYear()} Legacies </p>
+            </Col>
+          </Row>
+        </Container>
+      </Footer>
             {/* Footer End */}
         </>
     )
