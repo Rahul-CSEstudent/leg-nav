@@ -1,5 +1,8 @@
 import React, { Suspense, useEffect, useState, lazy } from "react";
-
+import { Link } from 'react-router-dom'
+import { Col, Container, Navbar, Row } from 'react-bootstrap'
+import Header, { HamburgerMenu, HeaderNav } from './Components/Header/Header'
+import ReactCustomScrollbar from "./Components/ReactCustomScrollbar"
 // Libraries
 import { Routes, Route, useLocation } from "react-router-dom";
 import retina from "retinajs";
@@ -346,7 +349,56 @@ function App() {
       }}
     >
       <div className="App" style={{ "--header-height": `${headerHeight}px` }}>
-        <PersonalportfolioPage />
+      <Header topSpace={{ desktop: true }} className="bg-[#23262d] absolute top-0 w-full">
+        <HeaderNav containerClass="ps-xl-0 pr-0 lg:pr-[15px] md:px-0 h-[100px] md:h-[70px]" fluid="fluid" expand="lg" bg="[#23262d]" className="px-[90px] py-0 xl:px-[45px] lg:px-0 md:px-[15px] navbar-lg-dark sm:px-0">
+          <Col className="col-auto col-sm-6 col-lg-2 mr-auto ps-lg-0">
+            <Link aria-label="header logo link" className="flex items-center" to="/">
+              <Navbar.Brand className="inline-block p-0 m-0">
+                <img className="default-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-parrot-green.webp' data-rjs='/assets/img/webp/logo-parrot-green@2x.webp' alt='logo' />
+                <img className="alt-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-parrot-green.webp' data-rjs='/assets/img/webp/logo-parrot-green@2x.webp' alt='logo' />
+                <img className="mobile-logo" width="111" height="36" loading="lazy" src='/assets/img/webp/logo-parrot-green.webp' data-rjs='/assets/img/webp/logo-parrot-green@2x.webp' alt='logo' />
+              </Navbar.Brand>
+            </Link>
+          </Col>
+          <Col className="col-auto lg:pr-[15px] md:pr-0">
+            <Link aria-label="link for call" to="#" className="font-serif font-medium text-md uppercase text-white sm:inline-block align-middle mr-[15px] pr-[17px] xs:hidden">Call us +44 123 456 7890</Link>
+            <HamburgerMenu theme="light" className="relative h-[100vh] w-1/2 xl:w-[60%] lg:w-[70%] md:w-[50%] sm:w-full z-[5] architecture-hamburgermenu landscape:md:h-[auto]">
+              <Row className="h-full mx-0">
+                <Col className="h-full col-6 bg-no-repeat bg-cover overflow-hidden relative bg-center md:hidden" style={{ backgroundImage: `url("https://via.placeholder.com/800x1500")` }}></Col>
+                <Col lg={6} className="p-0 h-full flex flex-col justify-center">
+                  <Row className="flex-col landscape:md:flex-row landscape:md:overflow-auto p-[5.5rem] mx-0 h-[100vh] items-center justify-center xs:p-[3rem] bg-[#23262d] ">
+                    <Col xs={12} className="hamburgermenu-modern-page p-0 text-left max-h-[calc(65vh-100px)] h-[calc(100vh-150px)] xs:max-h-[calc(65vh-60px)] xs:h-[calc(100vh-60px)]">
+                      <ReactCustomScrollbar autoHide>
+                        <div>
+                          <ul className="font-serif w-full h-full flex flex-col justify-center sm:flex sm:flex-col sm:justify-center sm:h-full">
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/">home</Link></li>
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/page/about-us">about</Link></li>
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/page/our-services">services</Link></li>
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/portfolio/portfolio-colorful-metro">portfolio</Link></li>
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/home-magazine">blog</Link></li>
+                            <li className="py-[13px] px-0 relative sm:text-center sm:!py-[10px]"><Link className="!font-normal" aria-label="menu" to="/page/contact-modern">contact</Link></li>
+                          </ul>
+                        </div>
+                      </ReactCustomScrollbar>
+                    </Col>
+                    <Col xs={12} className="block p-0 sm:hidden">
+                      <div className="hamburgermenu-modern-social-icon font-serif relative mt-[40px]">
+                        <ul>
+                          <li className="py-[10px] leading-none border-b border-[#ffffff26]"><a aria-label="link" target="_blank" rel="noreferrer" href="https://www.facebook.com/" className="text-white text-center rounded-full relative uppercase text-sm inline-block hover:opacity-50"><i className="fab fa-facebook-f w-[30px] text-left"></i>Facebook</a></li>
+                          <li className="py-[10px] leading-none border-b border-[#ffffff26]"><a aria-label="link" target="_blank" rel="noreferrer" href="https://twitter.com/" className="text-white text-center rounded-full relative uppercase text-sm inline-block hover:opacity-50"><i className="fab fa-twitter w-[30px] text-left"></i>Twitter</a></li>
+                          <li className="py-[10px] leading-none border-b border-[#ffffff26]"><a aria-label="link" target="_blank" rel="noreferrer" href="https://www.instagram.com/" className="text-white text-center rounded-full relative uppercase text-sm inline-block hover:opacity-50"><i className="fab fa-instagram w-[30px] text-left"></i>Instagram</a></li>
+                          <li className="py-[10px] leading-none"><a aria-label="link" target="_blank" href="https://dribbble.com/" rel="noreferrer" className="text-white text-center rounded-full relative uppercase text-sm inline-block hover:opacity-50"><i className="fab fa-dribbble w-[30px] text-left"></i>Dribbble</a></li>
+                        </ul>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </HamburgerMenu>
+          </Col>
+        </HeaderNav>
+      </Header>
+        <ArchitecturePage/>
       </div>
     </GlobalContext.Provider>
   )
