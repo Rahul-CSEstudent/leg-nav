@@ -323,7 +323,7 @@ const DesignagencyPage = (props) => {
                         <Row className="full-screen md:h-[650px] sm:h-[500px]">
                             <Col lg={5} md={6} sm={7} className="flex flex-col items-start justify-center">
                                 <h1 className="font-serif font-semibold text-[60px] leading-[95px] text-darkgray -tracking-[4px] mb-[4.5rem] xs:w-[65%] lg:text-[55px] lg:leading-[90px] md:text-[45px] md:leading-[65px] sm:text-[30px] sm:leading-[43px] sm:-tracking-[.5px]">Your Media And Press Release Partner</h1>
-                               <Buttons ariaLabel="Get started now" to="https://wa.me/+91+919629572929" className="font-semibold font-serif z-10 uppercase btn-expand rounded md:mb-[15px] hover:text-darkgray" size="xl" color="#232323" themeColor="#fff" title="Lets Share Your Journey" />
+                               <Buttons ariaLabel="Get started now" to="https://wa.me/+919629572929" className="font-semibold font-serif z-10 uppercase btn-expand rounded md:mb-[15px] hover:text-darkgray" size="xl" color="#232323" themeColor="#fff" title="Lets Share Your Journey" />
                             </Col>
                         </Row>
                     </Container>
@@ -482,7 +482,7 @@ const DesignagencyPage = (props) => {
           <Row className="items-center">
             <Col className="border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mb-[30px]"></Col>
             <m.div className="col-md-auto text-center px-[4.5rem] md:px-10 xs:pt-6 xs:pb-8" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
-              <span className="font-serif font-light text-[70px] leading-[90px] text-darkgray -tracking-[3px] block xs:text-[50px] xs:leading-[55px]">Let's Grow <span className="font-semibold">together?</span></span>
+              <span className="font-serif font-light text-[70px] leading-[90px] text-darkgray -tracking-[3px] block xs:text-[50px] xs:leading-[55px]">Let's Share Your Journey<span className="font-semibold">together?</span></span>
             </m.div>
             <div className="col-md border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mt-[30px]"></div>
           </Row>
