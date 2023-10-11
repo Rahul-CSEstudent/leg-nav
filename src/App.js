@@ -352,7 +352,7 @@ function App() {
             <AnimatePresence exitBeforeEnter>
               <Suspense fallback={<></>}>
                 <Routes>
-                  <Route path="/" element={<ArchitecturePage />} />
+                  <Route path="/" element={<DesignagencyPage />} />
                 </Routes>
               </Suspense>
             </AnimatePresence>
