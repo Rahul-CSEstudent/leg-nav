@@ -57,23 +57,23 @@ const IconWithTextData_02 = [
 const IconWithTextData_03 = [
     {
         icon: "line-icon-Navigation-LeftWindow text-gradient bg-gradient-to-r from-[#0039e3] via-[#5e28dd] via-[#741bd9] to-[#8600d4] text-[40px]",
-        title: "Amazing layouts",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title: "Legacies Forum",
+        content: "Media House",
     },
     {
         icon: "line-icon-Cursor-Click2 text-gradient bg-gradient-to-r from-[#0039e3] via-[#5e28dd] via-[#741bd9] to-[#8600d4] text-[40px]",
-        title: "No coding required",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title: "Lead With Legacies",
+        content: "Knowledge Base",
     },
     {
         icon: "line-icon-Gear-2 text-gradient bg-gradient-to-r from-[#0039e3] via-[#5e28dd] via-[#741bd9] to-[#8600d4] text-[40px]",
-        title: "Easy to customize",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title: "Rook Fellows",
+        content: "A Startup Assisstants",
     },
     {
         icon: "line-icon-Talk-Man text-gradient bg-gradient-to-r from-[#0039e3] via-[#5e28dd] via-[#741bd9] to-[#8600d4] text-[40px]",
-        title: "Customer satisfaction",
-        content: "Lorem ipsum is simply dummy text the printing typesetting",
+        title: "MyProBuddy",
+        content: "Startup Accelerator",
     },
 ]
 

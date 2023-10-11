@@ -1,4 +1,5 @@
 import React from 'react'
+import { IconWithTextData_03 } from "../../Components/IconWithText/IconWithTextData";
 import ProgressBar from '../../Components/ProgressBar/ProgressBar'
 import { ProgressBarData01 } from '../../Components/ProgressBar/ProgressBarData'
 // Libraries
@@ -42,15 +43,15 @@ const SocialIconsData = [
       icon: "fab fa-facebook-f"
     },
     {
-      link: "https://dribbble.com/",
-      icon: "fab fa-dribbble"
+      link: "https://www.linkedin.com/company/n/",
+      icon: "fab fa-linkedin"
     },
     {
       link: "https://twitter.com/",
       icon: "fab fa-twitter"
     },
     {
-      link: "https://www.instagram.com/",
+      link: "https://instagram.com/legaciesnavigate",
       icon: "fab fa-instagram"
     }
   ]
@@ -79,29 +80,7 @@ const TeamData = [
         },
       ]
     },
-    {
-      img: '/logo/amrish.png',
-      name: 'Amrish Krishnan',
-      designation: 'Senior Partner',
-      subtitle: '',
-      social_links: [
-        {
-          title: 'facebook',
-          link: "https://www.facebook.com",
-          icon: "fab fa-facebook-f"
-        },
-        {
-          title: 'Linkedin',
-          link: "https://www.linkedin.com/in/amrish-krishnan/",
-          icon: "fa-brands fa-linkedin"
-        },
-        {
-          title: 'instagram',
-          link: "https://www.instagram.com/buddy_its_me_who/",
-          icon: "fa-brands fa-instagram"
-        },
-      ]
-    },
+    
     {
       img: '/logo/monisha.png',
       name: 'Monishaa K M',
@@ -125,6 +104,30 @@ const TeamData = [
         },
       ]
     },
+
+    {
+        img: '/logo/amrish.png',
+        name: 'Amrish Krishnan',
+        designation: 'Senior Partner',
+        subtitle: '',
+        social_links: [
+          {
+            title: 'facebook',
+            link: "https://www.facebook.com",
+            icon: "fab fa-facebook-f"
+          },
+          {
+            title: 'Linkedin',
+            link: "https://www.linkedin.com/in/amrish-krishnan/",
+            icon: "fa-brands fa-linkedin"
+          },
+          {
+            title: 'instagram',
+            link: "https://www.instagram.com/buddy_its_me_who/",
+            icon: "fa-brands fa-instagram"
+          },
+        ]
+      },
   
   ]
 
@@ -432,9 +435,9 @@ const DesignagencyPage = (props) => {
                 {/* Section End */}
 
                 {/* Section Start */}
-                <section className="pt-[160px] overflow-hidden lg:pt-[120px] md:pt-[95px] sm:pt-[80px] xs:pt-[50px]">
+                <section className="pt-[100px] overflow-hidden lg:pt-[120px] md:pt-[95px] sm:pt-[80px] xs:pt-[50px]">
                     <Container>
-                        <Clients grid="row-cols-1 row-cols-sm-2 row-cols-md-4" theme="client-logo-style-06 light" data={ClientData} animation={fadeIn} />
+                        <Clients grid="row-cols-1 row-cols-sm-2 p-2 row-cols-md-4" theme="client-logo-style-06 light" data={ClientData} animation={fadeIn} />
                     </Container>
                 </section>
                 {/* Section End */}
@@ -453,6 +456,12 @@ const DesignagencyPage = (props) => {
                         carousel={false}
                         carouselOption={{ slidesPerView: 3, spaceBetween: 30, loop: true, navigation: true, autoplay: { delay: 3000, disableOnInteraction: true }, pagination: { dynamicBullets: true, clickable: true } }} />
                     </Container>
+      </section>
+      <section className="pb-[80px] lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white">
+        <Container>
+        <h3 className="heading-4 flex font-serif mb-10 p-0 item-center justify-center font-semibold text-darkgray tracking-[-1px]">Our Partners</h3>
+          <IconWithText grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 gap-y-5" theme="icon-with-text-03 text-center" data={IconWithTextData_03} animation={fadeIn} animationDelay={0} />
+        </Container>
       </section>
                 {/* Section End */}
                 <section className="py-[80px] overflow-hidden bg-[#ffcc2e] lg:py-[120px] md:py-[95px] sm:py-[80px] xs:py-[50px]">
@@ -487,7 +496,7 @@ const DesignagencyPage = (props) => {
         <Container>
           <Row>
             <Col lg={4} className="justify-start md:justify-center md:mb-[20px] flex items-center">
-              <span className="font-serif font-semibold text-sm uppercase text-darkgray">Call us today! +1 234 567 8910</span>
+              <span className="font-serif font-semibold text-sm uppercase text-darkgray">Call us today! +91 9629572929</span>
             </Col>
             <Col lg={4} className="text-center md:mb-[20px]">
               <SocialIcons theme="social-icon-style-12" iconColor="dark" size="md" data={SocialIconsData} />

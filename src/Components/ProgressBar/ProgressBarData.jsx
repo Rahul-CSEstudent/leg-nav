@@ -1,11 +1,11 @@
 const ProgressBarData01 = [
     {
-        title:"WEB INTERACTIVE",
-        value:"80",
+        title:"Creative Excellence",
+        value:"94",
     },
     {
-        title:"LOGO AND IDENTITY",
-        value:"95",
+        title:"Brand Management",
+        value:"98",
     },
 ]
 

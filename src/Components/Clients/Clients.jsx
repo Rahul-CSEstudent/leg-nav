@@ -28,7 +28,7 @@ const ClientSwitch = (params, item, i) => {
           <m.div
             className="client-box relative w-full h-full inline-block" {...{ ...params.animation, transition: { delay: i / 4, duration: 0.8 } }}>
             <a target={item.target} aria-label="clientlogo" href={item.link ? item.link : "#"}>
-              <img className="relative w-[auto]" width="148" height="43" src={item.img} alt="clientlogo" />
+              <img className="relative w-[auto] p-4" width="148" height="43" src={item.img} alt="clientlogo" />
             </a>
           </m.div>
         </Col>
