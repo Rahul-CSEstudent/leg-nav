@@ -459,7 +459,7 @@ const DesignagencyPage = (props) => {
       </section>
       <section className="pb-[80px] lg:py-[90px] md:py-[75px] sm:py-[50px] bg-white">
         <Container>
-        <h3 className="heading-4 flex font-serif mb-10 p-0 item-center justify-center font-semibold text-darkgray tracking-[-1px]">Our Partners</h3>
+        <h3 className="heading-4 flex font-serif mb-10 p-0 item-center justify-center font-semibold text-darkgray tracking-[-1px]">Our Ecosystem</h3>
           <IconWithText grid="row-cols-1 row-cols-lg-4 row-cols-sm-2 gap-y-5" theme="icon-with-text-03 text-center" data={IconWithTextData_03} animation={fadeIn} animationDelay={0} />
         </Container>
       </section>
@@ -482,7 +482,7 @@ const DesignagencyPage = (props) => {
           <Row className="items-center">
             <Col className="border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mb-[30px]"></Col>
             <m.div className="col-md-auto text-center px-[4.5rem] md:px-10 xs:pt-6 xs:pb-8" {...{ ...fadeIn, transition: { delay: 0.4 } }}>
-              <span className="font-serif font-light text-[70px] leading-[90px] text-darkgray -tracking-[3px] block xs:text-[50px] xs:leading-[55px]">Let's Share Your Journey<span className="font-semibold">together?</span></span>
+              <span className="font-serif font-light text-[70px] leading-[90px] text-darkgray -tracking-[3px] block xs:text-[50px] xs:leading-[55px]">Let's Share Your <span className="font-semibold">Journey</span></span>
             </m.div>
             <div className="col-md border-[1px] border-r-0 border-l-0 border-b-0 border-dotted border-darkgray sm:mt-[30px]"></div>
           </Row>
